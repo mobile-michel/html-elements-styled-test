@@ -1,0 +1,23 @@
+---
+layout: base
+---
+<header>
+    {% include 'nav-primary' %}
+    <h1>Test CSS Frameworks</h1>
+</header>
+<main>
+    <section aria-labelledby="{{ title | slugify }}">
+        <h2 id="{{ title | slugify }}">{{ title }}</h2>
+        {% if description %}<p>{{ description }}</p>{% endif %}
+        {{ content }}
+        {% if aside %}
+        <aside>
+            {% include 'nav-secondary' %}
+        </aside>
+        {% endif %}
+    </section>
+</main>
+<footer>
+    {% include 'nav-footer' %}
+    {% include 'copyright' %}
+</footer>

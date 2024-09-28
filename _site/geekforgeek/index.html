@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geek for Geek</title>
+  <link id="theme" rel="stylesheet" type="text/css" href="light.css" />
+  <style>
+    nav {
+      border: 1px dotted #1100ff;
+    }
+
+    main {
+      border: 1px dotted #ff0000;
+    }
+  </style>
+  <script>
+    function toggleTheme(value) {
+
+      // Obtain the name of stylesheet
+      // as a parameter and set it
+      // using href attribute.
+      var sheets = document
+        .getElementsByTagName('link');
+
+      sheets[0].href = value;
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Changing Style Sheets</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Navigation</a></li>
+        <li><a href="#">Products</a>
+          <ul>
+            <li><a href="#">Product 1</a></li>
+            <li><a href="#">Product 2</a></li>
+            <li><a href="#">Product 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <aside>
+        <h3>Aside</h3>
+        <nav>
+          <ul>
+            <li><a href="dohliam-mine.html">Dohliam</a></li>
+            <li><a href="elements-tester.html">Tester</a></li>
+            <li><a href="geekforgeek.html">Geek for Geek</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <h2>Dropdowns</h2>
+      <button onclick="toggleTheme('/assets/css-reworked/bahunya.css')">Bahunya</button>
+      <button onclick="toggleTheme('/assets/css-reworked/classless.css')">Classless</button>
+      <button onclick="toggleTheme('/assets/css-reworked/holiday.css')">Holiday</button>
+      <button onclick="toggleTheme('/assets/css-reworked/mvp.css')">MVP</button>
+      <h2>Aside</h2>
+      <button onclick="toggleTheme('/assets/css-reworked/awsm.css')">AWSM</button>
+      <button onclick="toggleTheme('/assets/css-reworked/simple.css')">Simple</button>
+      <button onclick="toggleTheme('/assets/css-reworked/tacit.css')">Tacit</button>
+      <h2>Center Content</h2>
+      <button onclick="toggleTheme('/assets/css-reworked/almond.css')">Almond</button>
+      <button onclick="toggleTheme('/assets/css-reworked/bare.css')">Bare</button>
+      <button onclick="toggleTheme('/assets/css-reworked/concrete.css')">Concrete</button>
+      <button onclick="toggleTheme('/assets/css-reworked/gdcss.css')">GD CSS</button>
+      <button onclick="toggleTheme('/assets/css-reworked/missing.css')">Missing</button>
+      <button onclick="toggleTheme('/assets/css-reworked/neat.css')">Neat</button>
+      <button onclick="toggleTheme('/assets/css-reworked/new.css')">New</button>
+      <button onclick="toggleTheme('/assets/css-reworked/pico.classless.css')">Pico Classless</button>
+      <button onclick="toggleTheme('/assets/css-reworked/PSone.css')">PS One</button>
+      <button onclick="toggleTheme('/assets/css-reworked/sakura.css')">Sakura</button>
+      <button onclick="toggleTheme('/assets/css-reworked/silicon.css')">Silicon</button>
+      <button onclick="toggleTheme('/assets/css-reworked/water.css')">Water</button>
+      <h2>Others</h2>
+      <button onclick="toggleTheme('/assets/css-reworked/beer.css')">Beer</button>
+      <button onclick="toggleTheme('/assets/css-reworked/bolt.css')">Bolt</button>
+      <button onclick="toggleTheme('/assets/css-reworked/bonsai.css')">Bonsai</button>
+      <button onclick="toggleTheme('/assets/css-reworked/bootstrap.css')">Bootstrap</button>
+      <button onclick="toggleTheme('/assets/css-reworked/chota.css')">Chota</button>
+      <button onclick="toggleTheme('/assets/css-reworked/cirrus.css')">Cirrus</button>
+      <button onclick="toggleTheme('/assets/css-reworked/kraken.css')">Kraken</button>
+      <button onclick="toggleTheme('/assets/css-reworked/materialize.css')">Materialize</button>
+      <button onclick="toggleTheme('/assets/css-reworked/milligram.css')">Milligram</button>
+      <button onclick="toggleTheme('/assets/css-reworked/mustard.css')">Mustard</button>
+      <button onclick="toggleTheme('/assets/css-reworked/paper.css')">Paper</button>
+      <button onclick="toggleTheme('/assets/css-reworked/picnic.css')">Picnic</button>
+      <button onclick="toggleTheme('/assets/css-reworked/pico.css')">Pico</button>
+      <button onclick="toggleTheme('/assets/css-reworked/skelet.css')">Skelet</button>
+      <button onclick="toggleTheme('/assets/css-reworked/vanilla.css')">Vanilla</button>
+      <button onclick="toggleTheme('/assets/css-reworked/wing.css')">Wing</button>
+      <h2>Reset or do nothing</h2>
+      <button onclick="toggleTheme('/assets/css-reworked/bulma.css')">Bulma</button>
+      <button onclick="toggleTheme('/assets/css-reworked/fomantic.css')">Fomantic</button>
+      <button onclick="toggleTheme('/assets/css-reworked/foundation.css')">Foundation</button>
+      <button onclick="toggleTheme('/assets/css-reworked/fylgja.css')">Fylgja</button>
+      <button onclick="toggleTheme('/assets/css-reworked/material-components-web.css')">MCW</button>
+      <button onclick="toggleTheme('/assets/css-reworked/nes.css')">NES</button>
+      <button onclick="toggleTheme('/assets/css-reworked/open-props.css')">Open Props</button>
+      <button onclick="toggleTheme('/assets/css-reworked/primer.css')">Primer</button>
+      <button onclick="toggleTheme('/assets/css-reworked/printed.css')">Printed</button>
+      <button onclick="toggleTheme('/assets/css-reworked/pure.css')">Pure</button>
+      <button onclick="toggleTheme('/assets/css-reworked/semantic.css')">Semantic</button>
+      <button onclick="toggleTheme('/assets/css-reworked/spectre.css')">Spectre</button>
+      <button onclick="toggleTheme('/assets/css-reworked/spruce.css')">Spruce</button>
+      <button onclick="toggleTheme('/assets/css-reworked/system.css')">System</button>
+      <button onclick="toggleTheme('/assets/css-reworked/terminal.css')">Terminal</button>
+      <button onclick="toggleTheme('/assets/css-reworked/uikit.css')">UI Kit</button>
+      <button onclick="toggleTheme('/assets/css-reworked/uswds.css')">USWDS</button>
+      <button onclick="toggleTheme('/assets/css-reworked/xp.css')">XP</button>
+      <article>
+        <h3>Article</h3>
+        <p>Content</p>
+        <p>More content</p>
+        <p>Even more content</p>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">Footer</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2024 at <a href="https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/">Geek for Geek</a></p>
+  </footer>
+</body>
+
+</html>

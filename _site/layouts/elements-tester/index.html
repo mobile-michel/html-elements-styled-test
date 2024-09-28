@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML5 elements tester</title>
+  <link rel="stylesheet" id="stylesheet">
+  <style>
+    #css-selection {
+      position: fixed;
+      right: 0;
+      background: #eee;
+      padding: 1em;
+      color: #1f1f1f;
+      max-width: 300px;
+    }
+
+    nav {
+      border: 1px dotted #1100ff;
+    }
+
+    main {
+      border: 1px dotted #ff0000;
+    }
+  </style>
+</head>
+
+<body id="body">
+
+<a href="/">Back to Homepage</a>
+
+  <aside id="css-selection">
+    <div>
+      <label for="select-css">Select CSS</label>
+      <select name="select-css" id="select-css">
+        <option value="">No CSS (browser defaults)</option>
+        <optgroup label="Dropdowns" id="select-css-resets">
+        </optgroup>
+        <optgroup label="Aside" id="select-css-aside">
+        </optgroup>
+        <optgroup label="CSS Frameworks" id="select-css-frameworks">
+        </optgroup>
+      </select>
+    </div>
+  </aside>
+  <header>
+    <h1>Drop-in Minimal CSS</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Navigation</a></li>
+        <li><a href="#">Products</a>
+          <ul>
+            <li><a href="#">Product 1</a></li>
+            <li><a href="#">Product 2</a></li>
+            <li><a href="#">Product 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <aside>
+        <h3>Aside</h3>
+        <nav>
+          <ul>
+            <li><a href="dohliam-mine.html">Dohliam</a></li>
+            <li><a href="elements-tester.html">Tester</a></li>
+            <li><a href="geekforgeek.html">Geek for Geek</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <h2>Main Content in a section</h2>
+      <p>This is a CSS framework switcher</p>
+      <article>
+        <h3>Article</h3>
+        <p>Content</p>
+        <p>More content</p>
+        <p>Even more content</p>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">Footer</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2024 at <a href="https://github.com/dohliam/dropin-minimal-css">GitHub</a></p>
+  </footer>
+  <script>
+    const stylesheet = document.getElementById('stylesheet');
+    const selectCss = document.getElementById('select-css');
+    const selectCssResets = document.getElementById('select-css-resets');
+    const selectCssAside = document.getElementById('select-css-aside');
+    const selectCssFrameworks = document.getElementById('select-css-frameworks');
+    const customCssForm = document.getElementById('custom-css-form');
+
+    const cssResets = [
+      { "name": "Bahunya", "link": "/assets/css-reworked/bahunya.css" },
+      { "name": "Classless", "link": "/assets/css-reworked/classless.css" },
+      { "name": "Holiday", "link": "/assets/css-reworked/holiday.css" },
+      { "name": "MVP", "link": "/assets/css-reworked/mvp.css" },
+    ];
+
+    const cssAside = [
+      { "name": "AWSM", "link": "/assets/css-reworked/awsm.css" },
+      { "name": "Simple", "link": "/assets/css-reworked/simple.css" },
+      { "name": "Tacit", "link": "/assets/css-reworked/tacit.css" },
+    ];
+
+    const cssFrameworks = [
+      { "name": "Almond", "link": "/assets/css-reworked/almond.css" },
+      { "name": "Bare", "link": "/assets/css-reworked/bare.css" },
+      { "name": "Concrete", "link": "/assets/css-reworked/concrete.css" },
+    ];
+
+    const populateSelect = (list, target) => {
+      list.forEach(item => {
+        const option = document.createElement('option');
+        option.textContent = item.name;
+        option.value = item.link;
+        target.appendChild(option);
+      });
+    }
+
+    populateSelect(cssResets, selectCssResets);
+    populateSelect(cssAside, selectCssAside);
+    populateSelect(cssFrameworks, selectCssFrameworks);
+
+    const changeCss = link => {
+      stylesheet.setAttribute('href', link);
+    }
+
+    selectCss.addEventListener('change', e => {
+      changeCss(e.target.value);
+    });
+
+    customCssForm.addEventListener('submit', e => {
+      e.preventDefault();
+      changeCss(e.target[0].value);
+    });
+  </script>
+</body>
+
+</html>
