@@ -1,12 +1,12 @@
 {
-  "name": "database-css",
+  "name": "html-elements-styled-test",
   "version": "1.0.0",
   "description": "Database of CSS frameworks with centered content",
   "main": "eleventy.config.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "eleventy",
-    "build-gp": "eleventy --pathprefix 'database-css'"
+    "build-gp": "eleventy --pathprefix 'html-elements-styled-test'"
   },
   "keywords": [
     "eleventy",

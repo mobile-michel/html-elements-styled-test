@@ -6,12 +6,12 @@ layout: default
 tags: [primary]
 ---
 {% for item in collections.tests %}
-- [{{ item.data.title }}]({{ item.url }}): {{ item.data.description }}
+- [{{ item.data.title }}]({{ item.url | url }}): {{ item.data.description }}
 {%- endfor %}
 
 ## Percentage of HTML tags
 {% for item in collections.percentage %}
-- [{{ item.data.title }}]({{ item.url }}): {{ item.data.description }}
+- [{{ item.data.title }}]({{ item.url | url }}): {{ item.data.description }}
 {%- endfor %}
 
 ### On-line Test Sites
